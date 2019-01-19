@@ -174,7 +174,7 @@ function resolveCollision(particle, otherParticle) {
 
           otherParticle.velocity.x = vFinal2.x;
         otherParticle.velocity.y = vFinal2.y;
-    }
+    
 }
 
         function distance(x1,y1,x2,y2)
