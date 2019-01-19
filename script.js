@@ -150,6 +150,13 @@ function setupWebAudio() {
  
 function resolveCollision(particle, otherParticle) {
     
+     const xdiff=particle1.x-particle2.x;
+     const ydiff=particle1.y-particle2.y;
+
+    const xveldiff=particle1.velocity.x-particle2.velocity.x;
+    const yveldiff=particle1.velocity.x-particle2.velocity.y;
+
+    if9(xdiff*xveldiff+ydiff*yveldiff>=0) {
     
       const angle = -Math.atan2(otherParticle.y - particle.y, otherParticle.x - particle.x);
  
@@ -174,6 +181,7 @@ function resolveCollision(particle, otherParticle) {
 
           otherParticle.velocity.x = vFinal2.x;
         otherParticle.velocity.y = vFinal2.y;
+    }
     
 }
 
